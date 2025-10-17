@@ -23,31 +23,29 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // 1. Detección de Suelo
-        // Esto es esencial para evitar que la gravedad acumule velocidad infinita.
+        // Detección de Suelo (esto es esencial para evitar que la gravedad acumule velocidad infinita)
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        // Si toca el suelo Y está cayendo (velocidad negativa), resetea la velocidad.
+        // Si toca el suelo y está cayendo (velocidad negativa), resetea la velocidad
         if (isGrounded && velocity.y < 0)
         {
-            velocity.y = -2f; // Lo 'pega' ligeramente al suelo para estabilidad.
+            velocity.y = -2f; // Lo 'pega' ligeramente al suelo para estabilidad
         }
 
-        // 2. Movimiento Horizontal (WASD)
+        // Movimiento Horizontal (WASD)
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        // Vector de movimiento basado en la dirección a la que mira el jugador.
+        // Vector de movimiento basado en la dirección a la que mira el jugador
         Vector3 move = transform.right * x + transform.forward * z;
 
         // Aplica el movimiento horizontal
         controller.Move(move * speed * Time.deltaTime);
 
-        // 3. Aplicación de Gravedad
-        // Suma la gravedad a la velocidad vertical en cada frame.
+        // Aplicación de Gravedad (suma la gravedad a la velocidad vertical en cada frame)
         velocity.y += gravity * Time.deltaTime;
 
-        // Aplica la velocidad vertical (caída/gravedad).
+        // Aplica la velocidad vertical (caída/gravedad)
         controller.Move(velocity * Time.deltaTime);
     }
 }
