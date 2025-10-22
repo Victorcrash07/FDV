@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Llave : MonoBehaviour, IInteractable
 {
+   // Definimos que item es esta llave
+    public InventoryItem thisKey = InventoryItem.Key; 
     public string GetInteractionMessage()
     {
         return "Coger llave";
@@ -9,7 +11,10 @@ public class Llave : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        // Aquí iría la lógica para añadir la llave al inventario del jugador
-        gameObject.SetActive(false); // La hacemos desaparecer
+        if (InventoryManager.Instance != null)
+        {
+            InventoryManager.Instance.AddItem(thisKey); // Registra la llave
+            gameObject.SetActive(false); // La hacemos desaparecer
+        }
     }
 }
