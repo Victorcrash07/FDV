@@ -9,8 +9,14 @@ public class PlayerInteraction : MonoBehaviour
     public Image crosshair; // Referencia a al puntero
     public Text interactionText; // Texto para mostrar el mensaje 
     public LayerMask interactionMask;
-    
+
     private Armario currentLocker; //Sirve para interactuar con el armario 
+    private TutorialManager tutorialManager;
+    void Start()
+{
+    // ... (otras inicializaciones)
+    tutorialManager = FindAnyObjectByType<TutorialManager>(); // Encuentra el manager
+}
     void Update()
     {
       // Tiene prioridad el escondite a la hora de interactuar
@@ -53,8 +59,17 @@ public class PlayerInteraction : MonoBehaviour
 
                 // El jugador presiona la tecla de interacción entoces llamamos a su método Interact()
                 else if (Input.GetKeyDown(interactionKey))
-                {  
+                {
                     interactable.Interact();
+                    
+                    if (tutorialManager != null && tutorialManager.enabled)
+                    {
+                        // Si el tutorial está esperando una interacción, avanzamos al siguiente paso
+                        if (tutorialManager.IsCurrentRequiredAction(TutorialAction.interactuar))
+                        {
+                            tutorialManager.NextStep();
+                        }
+                    }
                 }
             }
             else
