@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FDV.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68616e8984266fa45e846248f3904ead811a4994")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d096c26cc338ac6ca04ae5756fb4e9c0cfe1123")]
 [assembly: System.Reflection.AssemblyProductAttribute("FDV.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FDV.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

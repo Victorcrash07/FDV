@@ -3,36 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\prestamo_admin\\FDV\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|c:\\users\\prestamo_admin\\fdv\\fdv\\assets\\scripts\\armario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|solutionrelative:fdv\\assets\\scripts\\armario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64BE30B6-4A53-88A7-42FB-402A9E1369DF}|FDV.Tests\\FDV.Tests.csproj|c:\\users\\prestamo_admin\\fdv\\fdv.tests\\interactionlogictests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64BE30B6-4A53-88A7-42FB-402A9E1369DF}|FDV.Tests\\FDV.Tests.csproj|solutionrelative:fdv.tests\\interactionlogictests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|c:\\users\\prestamo_admin\\fdv\\fdv\\assets\\scripts\\cameralook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|solutionrelative:fdv\\assets\\scripts\\cameralook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64BE30B6-4A53-88A7-42FB-402A9E1369DF}|FDV.Tests\\FDV.Tests.csproj|c:\\users\\prestamo_admin\\fdv\\fdv.tests\\interactionlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64BE30B6-4A53-88A7-42FB-402A9E1369DF}|FDV.Tests\\FDV.Tests.csproj|solutionrelative:fdv.tests\\interactionlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|c:\\users\\prestamo_admin\\fdv\\fdv\\assets\\scripts\\cerrojopuerta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|solutionrelative:fdv\\assets\\scripts\\cerrojopuerta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64BE30B6-4A53-88A7-42FB-402A9E1369DF}|FDV.Tests\\FDV.Tests.csproj|c:\\users\\prestamo_admin\\fdv\\fdv.tests\\movementlogictests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64BE30B6-4A53-88A7-42FB-402A9E1369DF}|FDV.Tests\\FDV.Tests.csproj|solutionrelative:fdv.tests\\movementlogictests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|c:\\users\\prestamo_admin\\fdv\\fdv\\assets\\scripts\\iinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|solutionrelative:fdv\\assets\\scripts\\iinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64BE30B6-4A53-88A7-42FB-402A9E1369DF}|FDV.Tests\\FDV.Tests.csproj|c:\\users\\prestamo_admin\\fdv\\fdv.tests\\movementlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64BE30B6-4A53-88A7-42FB-402A9E1369DF}|FDV.Tests\\FDV.Tests.csproj|solutionrelative:fdv.tests\\movementlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|c:\\users\\prestamo_admin\\fdv\\fdv\\assets\\scripts\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|solutionrelative:fdv\\assets\\scripts\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\prestamo_admin\\fdv\\fdv\\assets\\scripts\\logic\\movementlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:fdv\\assets\\scripts\\logic\\movementlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|c:\\users\\prestamo_admin\\fdv\\fdv\\assets\\scripts\\llave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|solutionrelative:fdv\\assets\\scripts\\llave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|C:\\Users\\prestamo_admin\\FDV\\fdv\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|solutionrelative:fdv\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|c:\\users\\prestamo_admin\\fdv\\fdv\\assets\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|C:\\Users\\prestamo_admin\\FDV\\fdv\\assets\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|solutionrelative:fdv\\assets\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|c:\\users\\prestamo_admin\\fdv\\fdv\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|solutionrelative:fdv\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|C:\\Users\\prestamo_admin\\FDV\\fdv\\assets\\scripts\\armario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|solutionrelative:fdv\\assets\\scripts\\armario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|C:\\Users\\prestamo_admin\\FDV\\fdv\\assets\\scripts\\cameralook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|solutionrelative:fdv\\assets\\scripts\\cameralook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|C:\\Users\\prestamo_admin\\FDV\\fdv\\assets\\scripts\\cerrojopuerta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|solutionrelative:fdv\\assets\\scripts\\cerrojopuerta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|C:\\Users\\prestamo_admin\\FDV\\fdv\\assets\\scripts\\iinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|solutionrelative:fdv\\assets\\scripts\\iinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|C:\\Users\\prestamo_admin\\FDV\\fdv\\assets\\scripts\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|solutionrelative:fdv\\assets\\scripts\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|C:\\Users\\prestamo_admin\\FDV\\fdv\\assets\\scripts\\llave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|solutionrelative:fdv\\assets\\scripts\\llave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,20 +62,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "InteractionLogicTests.cs",
+              "DocumentMoniker": "C:\\Users\\prestamo_admin\\FDV\\FDV.Tests\\InteractionLogicTests.cs",
+              "RelativeDocumentMoniker": "FDV.Tests\\InteractionLogicTests.cs",
+              "ToolTip": "C:\\Users\\prestamo_admin\\FDV\\FDV.Tests\\InteractionLogicTests.cs",
+              "RelativeToolTip": "FDV.Tests\\InteractionLogicTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T00:45:39.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InteractionLogic.cs",
+              "DocumentMoniker": "C:\\Users\\prestamo_admin\\FDV\\FDV.Tests\\InteractionLogic.cs",
+              "RelativeDocumentMoniker": "FDV.Tests\\InteractionLogic.cs",
+              "ToolTip": "C:\\Users\\prestamo_admin\\FDV\\FDV.Tests\\InteractionLogic.cs",
+              "RelativeToolTip": "FDV.Tests\\InteractionLogic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T00:41:08.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MovementLogic.cs",
+              "DocumentMoniker": "C:\\Users\\prestamo_admin\\FDV\\FDV.Tests\\MovementLogic.cs",
+              "RelativeDocumentMoniker": "FDV.Tests\\MovementLogic.cs",
+              "ToolTip": "C:\\Users\\prestamo_admin\\FDV\\FDV.Tests\\MovementLogic.cs",
+              "RelativeToolTip": "FDV.Tests\\MovementLogic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T00:40:52.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MovementLogicTests.cs",
+              "DocumentMoniker": "C:\\Users\\prestamo_admin\\FDV\\FDV.Tests\\MovementLogicTests.cs",
+              "RelativeDocumentMoniker": "FDV.Tests\\MovementLogicTests.cs",
+              "ToolTip": "C:\\Users\\prestamo_admin\\FDV\\FDV.Tests\\MovementLogicTests.cs",
+              "RelativeToolTip": "FDV.Tests\\MovementLogicTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T00:14:54.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MovementLogic.cs",
+              "DocumentMoniker": "C:\\Users\\prestamo_admin\\FDV\\FDV\\Assets\\Scripts\\Logic\\MovementLogic.cs",
+              "RelativeDocumentMoniker": "FDV\\Assets\\Scripts\\Logic\\MovementLogic.cs",
+              "ToolTip": "C:\\Users\\prestamo_admin\\FDV\\FDV\\Assets\\Scripts\\Logic\\MovementLogic.cs",
+              "RelativeToolTip": "FDV\\Assets\\Scripts\\Logic\\MovementLogic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T00:09:23.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "C:\\Users\\prestamo_admin\\FDV\\FDV\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "FDV\\Assets\\Scripts\\PlayerMovement.cs",
               "ToolTip": "C:\\Users\\prestamo_admin\\FDV\\FDV\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeToolTip": "FDV\\Assets\\Scripts\\PlayerMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBQAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T13:53:38.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T13:53:38.613Z"
             },
             {
               "$type": "Document",
@@ -65,14 +149,13 @@
               "RelativeDocumentMoniker": "FDV\\Assets\\Scripts\\PlayerInteraction.cs",
               "ToolTip": "C:\\Users\\prestamo_admin\\FDV\\FDV\\Assets\\Scripts\\PlayerInteraction.cs",
               "RelativeToolTip": "FDV\\Assets\\Scripts\\PlayerInteraction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T13:53:36.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T13:53:36.451Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "Llave.cs",
               "DocumentMoniker": "C:\\Users\\prestamo_admin\\FDV\\FDV\\Assets\\Scripts\\Llave.cs",
               "RelativeDocumentMoniker": "FDV\\Assets\\Scripts\\Llave.cs",
@@ -80,12 +163,11 @@
               "RelativeToolTip": "FDV\\Assets\\Scripts\\Llave.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T13:53:35.219Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T13:53:35.219Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "InventoryManager.cs",
               "DocumentMoniker": "C:\\Users\\prestamo_admin\\FDV\\FDV\\Assets\\Scripts\\InventoryManager.cs",
               "RelativeDocumentMoniker": "FDV\\Assets\\Scripts\\InventoryManager.cs",
@@ -93,12 +175,11 @@
               "RelativeToolTip": "FDV\\Assets\\Scripts\\InventoryManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T13:53:29.351Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T13:53:29.351Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "IInteractable.cs",
               "DocumentMoniker": "C:\\Users\\prestamo_admin\\FDV\\FDV\\Assets\\Scripts\\IInteractable.cs",
               "RelativeDocumentMoniker": "FDV\\Assets\\Scripts\\IInteractable.cs",
@@ -106,12 +187,11 @@
               "RelativeToolTip": "FDV\\Assets\\Scripts\\IInteractable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T13:53:21.409Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T13:53:21.409Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "CerrojoPuerta.cs",
               "DocumentMoniker": "C:\\Users\\prestamo_admin\\FDV\\FDV\\Assets\\Scripts\\CerrojoPuerta.cs",
               "RelativeDocumentMoniker": "FDV\\Assets\\Scripts\\CerrojoPuerta.cs",
@@ -119,12 +199,11 @@
               "RelativeToolTip": "FDV\\Assets\\Scripts\\CerrojoPuerta.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T13:53:19.097Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T13:53:19.097Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "CameraLook.cs",
               "DocumentMoniker": "C:\\Users\\prestamo_admin\\FDV\\FDV\\Assets\\Scripts\\CameraLook.cs",
               "RelativeDocumentMoniker": "FDV\\Assets\\Scripts\\CameraLook.cs",
@@ -132,21 +211,19 @@
               "RelativeToolTip": "FDV\\Assets\\Scripts\\CameraLook.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T13:53:11.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T13:53:11.802Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Armario.cs",
               "DocumentMoniker": "C:\\Users\\prestamo_admin\\FDV\\FDV\\Assets\\Scripts\\Armario.cs",
               "RelativeDocumentMoniker": "FDV\\Assets\\Scripts\\Armario.cs",
               "ToolTip": "C:\\Users\\prestamo_admin\\FDV\\FDV\\Assets\\Scripts\\Armario.cs",
               "RelativeToolTip": "FDV\\Assets\\Scripts\\Armario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T13:46:25.98Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T13:46:25.98Z"
             }
           ]
         }
