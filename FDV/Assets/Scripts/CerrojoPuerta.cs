@@ -1,15 +1,16 @@
 
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 public class CerrojoPuerta : MonoBehaviour, IInteractable
 {
     // La llave que se necesita para abrir
     public InventoryItem requiredKey = InventoryItem.Key;
-    public string nextSceneName = "SalaPrincipal";
+   
     
     // Si queremos consumir la llave o solo chequear
     public bool consumeKey = true;
-
+    public Transform exitPoint;
+    public GameObject playerObject;
     private bool isLocked = true;
 
     public string GetInteractionMessage()
@@ -52,7 +53,37 @@ public class CerrojoPuerta : MonoBehaviour, IInteractable
 
     private void OpenDoor()
     {
-        SceneManager.LoadScene(nextSceneName);
-         Debug.Log("Atravesar la puerta");
+        PerformTeleport();
     }
+
+    private void PerformTeleport()
+    {
+        if (playerObject == null || exitPoint == null)
+        {
+            Debug.LogError("ERROR: ¡Falta el Player Object o el Exit Point! Revisa el Inspector.");
+            return;
+        }
+
+        // 1. Desactivar temporalmente los scripts de movimiento/cámara
+        PlayerMovement playerMovementScript = playerObject.GetComponent<PlayerMovement>();
+        CharacterController controller = playerObject.GetComponent<CharacterController>();
+        MonoBehaviour mouseLookScript = playerObject.GetComponentInChildren<CameraLook>();
+        
+        // Desactivamos temporalmente el movimiento y el CharacterController
+        if (playerMovementScript != null) playerMovementScript.enabled = false;
+        if (mouseLookScript != null) mouseLookScript.enabled = false;
+        if (controller != null) controller.enabled = false;
+
+        // 2. TELETRANSPORTE (Mueve la posición y rotación del jugador)
+        playerObject.transform.position = exitPoint.position;
+        playerObject.transform.rotation = exitPoint.rotation;
+        
+        // 3. Reactivamos el movimiento
+        if (controller != null) controller.enabled = true;
+        if (mouseLookScript != null) mouseLookScript.enabled = true;
+        if (playerMovementScript != null) playerMovementScript.enabled = true;
+        
+        Debug.Log($"Jugador teletransportado a la nueva sala.");
+    }
+
 }
