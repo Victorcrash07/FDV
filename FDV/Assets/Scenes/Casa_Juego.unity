@@ -963,6 +963,7 @@ Transform:
   - {fileID: 1026750253}
   - {fileID: 1901110062}
   - {fileID: 678483971}
+  - {fileID: 917160681}
   m_Father: {fileID: 1775671415}
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!1001 &290899893
@@ -1485,7 +1486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CerrojoPuerta
   requiredKey: 1
-  consumeKey: 1
+  consumeKey: 0
   exitPoint: {fileID: 1170887343}
   playerObject: {fileID: 724450390}
 --- !u!1 &330585543
@@ -4377,6 +4378,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1775671415}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &917160680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 917160681}
+  m_Layer: 0
+  m_Name: Teleport_destino_sala_A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &917160681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917160680}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: -0.007, y: 0.14931253, z: -0.2}
+  m_LocalScale: {x: 1.2499996, y: 1.25, z: 1.2499996}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 281729529}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963376475
 GameObject:
   m_ObjectHideFlags: 0
@@ -5091,7 +5123,7 @@ Transform:
   m_GameObject: {fileID: 1170887342}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 6.87357, y: -1.27692, z: -2.109}
+  m_LocalPosition: {x: 7.861, y: -1.27692, z: -2.109}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6203,8 +6235,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CerrojoPuerta
   requiredKey: 1
-  consumeKey: 1
-  exitPoint: {fileID: 1170887343}
+  consumeKey: 0
+  exitPoint: {fileID: 917160681}
   playerObject: {fileID: 724450390}
 --- !u!65 &1534269051
 BoxCollider:
