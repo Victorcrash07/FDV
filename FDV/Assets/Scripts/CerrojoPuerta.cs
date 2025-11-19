@@ -11,7 +11,7 @@ public class CerrojoPuerta : MonoBehaviour, IInteractable
     public bool consumeKey = true;
     public Transform exitPoint;
     public GameObject playerObject;
-    private bool isLocked = true;
+    public bool isLocked = true;
 
     public string GetInteractionMessage()
     {
