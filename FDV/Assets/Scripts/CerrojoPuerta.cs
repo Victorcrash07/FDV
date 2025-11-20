@@ -12,6 +12,7 @@ public class CerrojoPuerta : MonoBehaviour, IInteractable
     public Transform exitPoint;
     public GameObject playerObject;
     public bool isLocked = true;
+    public CerrojoPuerta exitDoorLock; 
 
     public string GetInteractionMessage()
     {
@@ -53,6 +54,10 @@ public class CerrojoPuerta : MonoBehaviour, IInteractable
 
     private void OpenDoor()
     {
+        if (exitDoorLock != null)
+        {
+            exitDoorLock.isLocked = false; 
+        }
         PerformTeleport();
     }
 

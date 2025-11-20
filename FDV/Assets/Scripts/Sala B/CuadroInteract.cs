@@ -2,32 +2,50 @@ using UnityEngine;
 
 public class CuadroInteract : MonoBehaviour, IInteractable
 {
-    public CuadroManager manager;
+    // VARIABLES DE ESTADO Y OBJETOS GLOBALES (AHORA EN ESTE SCRIPT)
+    private int fragmentosColocados = 0; 
+    private const int TOTAL_FRAGMENTOS = 2;
+    
+    [Header("Objetos Controlados")]
+    [Tooltip("El GameObject que se activa cuando se coloca el Fragmento 1.")]
     public GameObject fragmentoVisual1; 
+    [Tooltip("El GameObject que se activa cuando se coloca el Fragmento 2.")]
     public GameObject fragmentoVisual2; 
 
-    // Asegúrate de que estos Enums existan en tu InventoryItem.cs
+    public GameObject incompletePicture; 
+    public GameObject completePicture;   
+    public CerrojoPuerta exitDoorLock;   
+    public CerrojoPuerta PuertaD;
+    [Header("Audio")]
+    public AudioSource audioSource; // ¡Pon este componente en el mismo GameObject del cuadro!
+   // public AudioClip correctSound; // Sonido de éxito al completar el puzle
+    
+    [Header("Fragmentos Requeridos")]
     public InventoryItem requiredFragment1 = InventoryItem.FragmentoCuadro1; 
     public InventoryItem requiredFragment2 = InventoryItem.FragmentoCuadro2; 
 
-    // Estado para saber qué fragmentos ya están colocados
+    // Estados para saber qué fragmentos ya están colocados
     private bool fragment1Placed = false;
     private bool fragment2Placed = false;
+    private InventoryItem PuzzleComplete = InventoryItem.PuzzleCuadroCompleto; 
 
     void Start()
     {
-        // Asignación de Manager de respaldo
-        if (manager == null) manager = FindAnyObjectByType<CuadroManager>();
+        // Asignación de AudioSource si falta
+        if (audioSource == null) audioSource = GetComponent<AudioSource>();
+        
+        // El cuadro completo debe estar oculto al inicio
+        if (completePicture != null) completePicture.SetActive(false);
     }
 
     public string GetInteractionMessage()
     {
-        int placedCount = (fragment1Placed ? 1 : 0) + (fragment2Placed ? 1 : 0);
-        int missingCount = 2 - placedCount;
-
+        // ... (La lógica de mensaje se mantiene igual para indicar qué falta) ...
+        int placedCount = (fragment1Placed ? 1 : 0) + (fragmentoVisual2.activeInHierarchy ? 1 : 0);
+        int missingCount = TOTAL_FRAGMENTOS - placedCount;
+        
         if (missingCount == 0) return "Cuadro completo.";
         
-        // Comprobar si el jugador tiene ALGUNO de los fragmentos que faltan
         bool hasMissingFragment = 
             (!fragment1Placed && InventoryManager.Instance.ContainsItem(requiredFragment1)) ||
             (!fragment2Placed && InventoryManager.Instance.ContainsItem(requiredFragment2));
@@ -43,44 +61,69 @@ public class CuadroInteract : MonoBehaviour, IInteractable
     {
         if (fragment1Placed && fragment2Placed) return; // Si ya está completo, no interactúa.
 
-        // LÓGICA DE COLOCACIÓN: Intentamos colocar los fragmentos en orden de prioridad
+        // LÓGICA DE COLOCACIÓN Y CONTEO
         
         // 1. Intentar colocar el FRAGMENTO 1
         if (!fragment1Placed && InventoryManager.Instance.ContainsItem(requiredFragment1))
         {
-            InventoryManager.Instance.RemoveItem(requiredFragment1);
-            
-            // Notificar al Manager
-            manager.PlaceFragment(); 
-            fragment1Placed = true;
-            
-            // Lógica Visual: Mostrar la pieza 1 colocada
-            if (fragmentoVisual1 != null) fragmentoVisual1.SetActive(true); 
-
-            Debug.Log($"Fragmento {requiredFragment1.ToString()} colocado con éxito.");
-            return; // Salir después de colocar uno.
+            PlaceAndCheck(requiredFragment1, ref fragment1Placed, fragmentoVisual1);
         }
         
         // 2. Intentar colocar el FRAGMENTO 2
         else if (!fragment2Placed && InventoryManager.Instance.ContainsItem(requiredFragment2))
         {
-            InventoryManager.Instance.RemoveItem(requiredFragment2);
-            
-            // Notificar al Manager
-            manager.PlaceFragment(); 
-            fragment2Placed = true; // Corregido el nombre de la variable
-            
-            // Lógica Visual: Mostrar la pieza 2 colocada
-            if (fragmentoVisual2 != null) fragmentoVisual2.SetActive(true); 
-
-            Debug.Log($"Fragmento {requiredFragment2.ToString()} colocado con éxito.");
-            return; // Salir después de colocar uno.
+            PlaceAndCheck(requiredFragment2, ref fragment2Placed, fragmentoVisual2);
         }
+    }
+    
+    // Método auxiliar para limpiar la lógica de colocación
+    private void PlaceAndCheck(InventoryItem item, ref bool isPlacedFlag, GameObject visual)
+    {
+        InventoryManager.Instance.RemoveItem(item);
         
-        // Si interactúa pero no tiene los ítems:
-        else
+        // Lógica Visual
+        if (visual != null) visual.SetActive(true); 
+        isPlacedFlag = true;
+
+        fragmentosColocados++;
+        
+        Debug.Log($"Fragmento {item.ToString()} colocado. Total: {fragmentosColocados}/{TOTAL_FRAGMENTOS}");
+
+        if (fragmentosColocados == TOTAL_FRAGMENTOS)
         {
-             Debug.Log("No tienes el fragmento necesario o ya has colocado ambos.");
+            // EL PUZLE SE HA COMPLETADO. DESBLOQUEO DIRECTO.
+            RevealAndUnlock();
         }
+    }
+
+    private void RevealAndUnlock()
+    {
+        // 1. AUDIO DE ÉXITO
+         if (audioSource != null )//&& correctSound != null)
+         {
+                audioSource.Play();
+         }
+        
+        // 2. DESBLOQUEO DE LA PUERTA
+        if (exitDoorLock != null)
+        {
+            // Nota: isLocked debe ser público en CerrojoPuerta.cs
+            InventoryManager.Instance.AddItem(PuzzleComplete);
+            exitDoorLock.isLocked = false;
+            PuertaD.isLocked = false;
+        }
+        // 3. REVELACIÓN VISUAL FINAL
+        if (incompletePicture != null) incompletePicture.SetActive(false);
+        if (completePicture != null) completePicture.SetActive(true);
+        fragmentoVisual1.SetActive(false);
+        fragmentoVisual2.SetActive(false);
+        
+        
+        
+       
+        // 4. Desactivar el componente de interacción para que no se pueda interactuar más
+        GetComponent<Collider>().enabled = false;
+        
+        // **QUITAMOS LA LÓGICA DEL SYMBOL SELECTOR Y LOS ARRAYS DE SÍMBOLOS**
     }
 }

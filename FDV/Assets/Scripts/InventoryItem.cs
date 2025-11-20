@@ -6,5 +6,7 @@ public enum InventoryItem
     Flashlight,     // Ejemplo: Linterna
     FragmentoCuadro1, 
     FragmentoCuadro2,
-    PuzzleCuadroCompleto
+    PuzzleCuadroCompleto,
+    Partitura,
+    SalaEKey
 }
