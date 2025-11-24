@@ -19,8 +19,8 @@
       "RelativeMoniker": "D:0:0:{64BE30B6-4A53-88A7-42FB-402A9E1369DF}|FDV.Tests\\FDV.Tests.csproj|solutionrelative:fdv.tests\\movementlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\prestamo_admin\\fdv\\fdv\\assets\\scripts\\logic\\movementlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:fdv\\assets\\scripts\\logic\\movementlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\prestamo_admin\\FDV\\FDV\\Assets\\Scripts\\Logic\\MovementLogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FDV\\Assets\\Scripts\\Logic\\MovementLogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{27A869AB-5385-CC1A-ED38-057D916C73B2}|FDV\\Assembly-CSharp.csproj|C:\\Users\\prestamo_admin\\FDV\\fdv\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,8 +87,7 @@
               "RelativeToolTip": "FDV.Tests\\InteractionLogic.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T00:41:08.714Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-06T00:41:08.714Z"
             },
             {
               "$type": "Document",
@@ -100,8 +99,7 @@
               "RelativeToolTip": "FDV.Tests\\MovementLogic.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T00:40:52.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-06T00:40:52.138Z"
             },
             {
               "$type": "Document",
@@ -113,8 +111,7 @@
               "RelativeToolTip": "FDV.Tests\\MovementLogicTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T00:14:54.302Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-06T00:14:54.302Z"
             },
             {
               "$type": "Document",
@@ -126,8 +123,7 @@
               "RelativeToolTip": "FDV\\Assets\\Scripts\\Logic\\MovementLogic.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T00:09:23.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-06T00:09:23.446Z"
             },
             {
               "$type": "Document",
