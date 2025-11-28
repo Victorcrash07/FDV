@@ -8,5 +8,11 @@ public enum InventoryItem
     FragmentoCuadro2,
     PuzzleCuadroCompleto,
     Partitura,
-    SalaEKey
+    SalaEKey,
+    Receta1,
+    Receta2,
+    Receta3,
+    Biblia1,
+    Biblia2,
+    Biblia3
 }

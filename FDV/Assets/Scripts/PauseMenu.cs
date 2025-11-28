@@ -69,6 +69,16 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Cargando Menú Principal...");
     }
 
+    public void StartGame()
+    {
+        // 1. Aseguramos que el tiempo fluya normalmente
+        Time.timeScale = 1f; 
+        
+        // 2. Carga la escena principal del juego
+        SceneManager.LoadScene("Casa_Juego"); 
+        
+        Debug.Log("Iniciando juego...");
+    }
     // 4. Botón para Salir de la Aplicación (solo funciona en build)
     public void QuitGame()
     {

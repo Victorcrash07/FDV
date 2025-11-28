@@ -1,6 +1,6 @@
 
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class CerrojoFinal : MonoBehaviour, IInteractable
 {
     public bool isLocked = true;
@@ -29,13 +29,18 @@ public class CerrojoFinal : MonoBehaviour, IInteractable
     
     private void OpenDoor()
     {
-        // 3. ACTIVAR LA CINEMÁTICA
+        Time.timeScale = 0f; 
+        Cursor.lockState = CursorLockMode.None; 
+        Cursor.visible = true;
+        SceneManager.LoadScene("MainMenu");
+
+     /*   // 3. ACTIVAR LA CINEMÁTICA
     if (cinematicTriggerObject != null)
     {
         // El objeto de la cinemática (que debe estar inactivo) se encenderá.
         cinematicTriggerObject.SetActive(true); 
         canvasCinematic.gameObject.SetActive(true); // Activar el canvas de la cinemática
-    }
+    }*/
     }
 
    

@@ -7,7 +7,7 @@ public class PartituraItem : MonoBehaviour, IInteractable
 
     public string GetInteractionMessage()
     {
-        return "Coger Partitura (E)";
+        return "Coger (E)";
     }
 
     public void Interact()
