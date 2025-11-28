@@ -1,49 +1,52 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CartaUIManager : MonoBehaviour
 {
     public static CartaUIManager Instance;
 
-    [Header("Referencias UI")]
-    public GameObject panelCarta;
-    public GameObject fondoOscuro;
+    [Header("UI")]
+    public GameObject panelCarta;   // El panel donde está el texto
 
-    [Header("Audio")]
-    public AudioSource audioCarta;
-
-    [Header("Player Control")]
+    [Header("Player")]
     public PlayerMovement playerMovement;
     public CameraLook cameraLook;
 
     private bool cartaAbierta = false;
+    public bool CartaAbierta => cartaAbierta;   // para consultarlo desde otros scripts
 
     private void Awake()
     {
         Instance = this;
     }
 
+    private void Update()
+    {
+        // Si la carta está abierta y el jugador pulsa E, cerramos
+        if (cartaAbierta && Input.GetKeyDown(KeyCode.E))
+        {
+            CerrarCarta();
+        }
+    }
+
     public void AbrirCarta()
     {
-        if (cartaAbierta) return;
+        if (cartaAbierta) return;   // por si acaso
 
         cartaAbierta = true;
 
-        panelCarta.SetActive(true);
-        fondoOscuro.SetActive(true);
+        if (panelCarta != null)
+            panelCarta.SetActive(true);
 
-        if (audioCarta != null)
-            audioCarta.Play();
-
-        // Desactivar movimiento del jugador
         if (playerMovement != null)
             playerMovement.enabled = false;
 
         if (cameraLook != null)
             cameraLook.enabled = false;
 
-        // Liberar cursor
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        Debug.Log("Carta ABRIENDO");
     }
 
     public void CerrarCarta()
@@ -52,21 +55,18 @@ public class CartaUIManager : MonoBehaviour
 
         cartaAbierta = false;
 
-        panelCarta.SetActive(false);
-        fondoOscuro.SetActive(false);
+        if (panelCarta != null)
+            panelCarta.SetActive(false);
 
-        if (audioCarta != null)
-            audioCarta.Stop();
-
-        // REACTIVAR movimiento del jugador
         if (playerMovement != null)
             playerMovement.enabled = true;
 
         if (cameraLook != null)
             cameraLook.enabled = true;
 
-        // Bloquear cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        Debug.Log("Carta CERRANDO");
     }
 }

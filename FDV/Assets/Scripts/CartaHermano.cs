@@ -9,8 +9,17 @@ public class CartaHermano : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        // Llamamos al UI Manager para abrir la carta
-        CartaUIManager.Instance.AbrirCarta();
-        Debug.Log("INTERACT() DE LA CARTA SE HA EJECUTADO");
+        // Si la carta ya está abierta, no hacemos nada
+        if (CartaUIManager.Instance != null && CartaUIManager.Instance.CartaAbierta)
+            return;
+
+        if (CartaUIManager.Instance != null)
+        {
+            CartaUIManager.Instance.AbrirCarta();
+        }
+        else
+        {
+            Debug.LogError("No hay CartaUIManager en la escena");
+        }
     }
 }
