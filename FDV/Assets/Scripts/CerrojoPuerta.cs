@@ -16,7 +16,7 @@ public class CerrojoPuerta : MonoBehaviour, IInteractable
 
     public string GetInteractionMessage()
     {
-        return isLocked ? $"Necesitas la {requiredKey.ToString()} para abrir la puerta" : "Abrir Puerta";
+        return isLocked ? $"Necesitas resolver el puzzle para abrir la puerta" : "Abrir Puerta";
     }
 
     public void Interact()
