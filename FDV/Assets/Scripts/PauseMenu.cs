@@ -8,7 +8,13 @@ public class PauseMenu : MonoBehaviour
 
     // Referencia al GameObject del panel de menú
     public GameObject pauseMenuUI; 
+    public GameObject settingsMenuUI;
+    // PauseMenu.cs (Añadir al inicio)
 
+    public TutorialManager tutorialManager; 
+
+// ... (En el botón del Menú Rápido, el evento OnClick llama a: 
+// tutorialManager.RestartTutorial())
     void Update()
     {
         // La tecla estándar para pausar es Escape
@@ -30,7 +36,7 @@ public class PauseMenu : MonoBehaviour
     {
         // Oculta el panel del menú
         pauseMenuUI.SetActive(false); 
-        
+        settingsMenuUI.SetActive(false);
         // El tiempo vuelve a fluir a velocidad normal
         Time.timeScale = 1f; 
         
@@ -89,4 +95,37 @@ public class PauseMenu : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
     }
+
+    // PauseMenu.cs (Nuevo método)
+
+    public void OpenSettings()
+    {
+        if (pauseMenuUI != null)
+        {
+            // 1. Ocultar el panel principal
+            pauseMenuUI.SetActive(false);
+        }
+        
+        if (settingsMenuUI != null)
+        {
+            // 2. Mostrar el panel de ajustes
+            settingsMenuUI.SetActive(true);
+        }
+    }
+
+    public void CloseSettings()
+    {
+        if (settingsMenuUI != null)
+        {
+            // 1. Ocultar el panel de ajustes
+            settingsMenuUI.SetActive(false);
+        }
+        
+        if (pauseMenuUI != null)
+        {
+            // 2. Mostrar el panel principal
+            pauseMenuUI.SetActive(true);
+        }
+    }
+
 }

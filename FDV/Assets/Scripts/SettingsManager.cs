@@ -1,0 +1,31 @@
+using UnityEngine;
+// NEW SCRIPT: SettingsManager.cs (Fragmento)
+
+using UnityEngine.Audio;
+
+public class SettingsManager : MonoBehaviour
+{
+    public AudioMixer masterMixer; // Referencia a tu Audio Mixer
+
+    // Convierte el valor del slider (0 a 1) a decibelios (-80 a 0)
+    public void SetMasterVolume(float volume)
+    {
+        // El logaritmo permite que el control de volumen sea más suave.
+        masterMixer.SetFloat("MasterVolume", Mathf.Log10(volume) * 20);
+    }
+    
+    // Repite esta función para SetMusicVolume(float volume) y SetFXVolume(float volume)
+
+// SettingsManager.cs (Continuación)
+
+    public CameraLook playerCameraLook; // Asignar el script CameraLook
+
+    public void SetMouseSensitivity(float sensitivity)
+    {
+        // El slider dará un valor (ej: 0.5 a 5). Debes ajustar el rango en tu UI.
+        if (playerCameraLook != null)
+        {
+            playerCameraLook.mouseSensitivity = sensitivity;
+        }
+    }
+}

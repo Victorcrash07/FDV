@@ -143,4 +143,24 @@ public class TutorialManager : MonoBehaviour
             NextStep();
         }
     }
+
+    // TutorialManager.cs (Fragmento)
+
+    // [NUEVO MÉTODO] Para llamar desde el botón del menú rápido
+    public void RestartTutorial()
+    {
+        // Aseguramos que el tutorial esté habilitado
+        this.enabled = true; 
+        
+        // Reinicia el índice al primer paso
+        currentStepIndex = 0; 
+        
+        // Muestra el primer paso.
+        DisplayCurrentStep();
+        
+        // Opcional: Pausar el juego si no está ya pausado.
+        // if (!PauseMenu.GameIsPaused) Pause();
+        
+        Debug.Log("Tutorial Reiniciado.");
+    }
 }
