@@ -149,13 +149,19 @@ public class TutorialManager : MonoBehaviour
     // [NUEVO MÉTODO] Para llamar desde el botón del menú rápido
     public void RestartTutorial()
     {
-        // Aseguramos que el tutorial esté habilitado
-        this.enabled = true; 
+        // 1. [CLAVE] Asegurar que el GameObject del texto esté activo
+        if (tutorialText != null)
+        {
+            tutorialText.gameObject.SetActive(true); // ¡Añadir esta línea!
+        }
         
-        // Reinicia el índice al primer paso
-        currentStepIndex = 0; 
+        // 2. Aseguramos que el script del tutorial esté habilitado
+        this.enabled = true;
         
-        // Muestra el primer paso.
+        // 3. Reinicia el índice al primer paso
+        currentStepIndex = 0;
+        
+        // 4. Muestra el primer paso. (Ahora el texto existe para mostrarse)
         DisplayCurrentStep();
         
         // Opcional: Pausar el juego si no está ya pausado.

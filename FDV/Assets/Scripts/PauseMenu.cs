@@ -11,7 +11,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject settingsMenuUI;
     // PauseMenu.cs (Añadir al inicio)
 
-    public TutorialManager tutorialManager; 
+    public GameObject tutorialManager; 
 
 // ... (En el botón del Menú Rápido, el evento OnClick llama a: 
 // tutorialManager.RestartTutorial())
@@ -127,5 +127,26 @@ public class PauseMenu : MonoBehaviour
             pauseMenuUI.SetActive(true);
         }
     }
+
+    public void ReiniciarTutorial()
+    {
+        if (tutorialManager != null)
+        {
+            TutorialManager tutorialScript = tutorialManager.GetComponent<TutorialManager>();
+            if (tutorialScript != null)
+            {
+                tutorialScript.RestartTutorial();
+            }
+            else
+            {
+                Debug.LogWarning("El componente TutorialManager no se encontró en el GameObject asignado.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("El GameObject del TutorialManager no está asignado en el PauseMenu.");
+        }  
+    }
+
 
 }
