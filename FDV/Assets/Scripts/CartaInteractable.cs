@@ -14,6 +14,9 @@ public class CartaInteractable : MonoBehaviour, IInteractable
     [SerializeField] private KeyCode closeKey = KeyCode.E;
     [SerializeField] private KeyCode closeAltKey = KeyCode.Escape;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource cartaAudio;
+
     private bool isOpen = false;
 
     private void Start()
@@ -51,7 +54,12 @@ public class CartaInteractable : MonoBehaviour, IInteractable
         isOpen = true;
         cartaPanel.SetActive(true);
         playerInteraction.isReading = true;
-        
+
+        if (playerInteraction != null)
+            playerInteraction.ResetInteractionUI();
+
+        // Reproducir audio si está asignado
+        if (cartaAudio != null) cartaAudio.Play();
 
         // Bloquear jugador
         playerMovement.enabled = false;
@@ -68,6 +76,10 @@ public class CartaInteractable : MonoBehaviour, IInteractable
         isOpen = false;
         cartaPanel.SetActive(false);
         playerInteraction.isReading = false;
+
+        // Parar audio si está sonando
+        if (cartaAudio != null)
+            cartaAudio.Stop();
 
         // Reactivar jugador
         playerMovement.enabled = true;

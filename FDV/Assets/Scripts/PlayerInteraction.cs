@@ -96,9 +96,11 @@ public class PlayerInteraction : MonoBehaviour
 
 
     // Método para resetear la UI a su estado normal
-    void ResetInteractionUI()
+    public void ResetInteractionUI()
     {
-        crosshair.color = Color.white;
         interactionText.gameObject.SetActive(false);
+        interactionText.text = "";
+        crosshair.color = Color.white;
+        //interactionText.gameObject.SetActive(false);
     }
 }
