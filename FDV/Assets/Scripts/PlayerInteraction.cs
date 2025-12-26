@@ -12,6 +12,8 @@ public class PlayerInteraction : MonoBehaviour
 
     private Armario currentLocker; //Sirve para interactuar con el armario 
     private TutorialManager tutorialManager;
+
+    public bool isReading = false;
     void Start()
 {
     // ... (otras inicializaciones)
@@ -21,6 +23,13 @@ public class PlayerInteraction : MonoBehaviour
     {
       // Tiene prioridad el escondite a la hora de interactuar
     // Solo si currentLocker no es null, significa que estamos escondidos
+
+    if (isReading)
+    {
+            ResetInteractionUI();
+            return;
+    }
+
     if (currentLocker != null)
     {
         // Si presionamos la tecla de interacción, salimos

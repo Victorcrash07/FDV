@@ -3,37 +3,41 @@ using UnityEngine;
 public class CartaInteractable : MonoBehaviour, IInteractable
 {
     [Header("UI")]
-    [SerializeField] private GameObject cartaPanel; // FondoCarta (panel raíz)
+    [SerializeField] private GameObject cartaPanel; // FondoCarta
 
-    [Header("Player refs")]
-    [SerializeField] private MonoBehaviour playerMovement; // tu PlayerMovement
-    [SerializeField] private MonoBehaviour cameraLook;     // tu CameraLook
+    [Header("Player")]
+    [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private MonoBehaviour cameraLook; // tu script de cámara
+    [SerializeField] private PlayerInteraction playerInteraction;
 
-    [Header("Opcional")]
+    [Header("Keys")]
     [SerializeField] private KeyCode closeKey = KeyCode.E;
     [SerializeField] private KeyCode closeAltKey = KeyCode.Escape;
 
-    private bool isOpen;
+    private bool isOpen = false;
 
     private void Start()
     {
-        if (cartaPanel != null) cartaPanel.SetActive(false);
-        isOpen = false;
+        cartaPanel.SetActive(false);
     }
 
     private void Update()
     {
         if (!isOpen) return;
 
-        // Cerrar con E o ESC
         if (Input.GetKeyDown(closeKey) || Input.GetKeyDown(closeAltKey))
-            Close();
+        {
+            CloseCarta();
+        }
     }
 
     public void Interact()
     {
-        if (!isOpen) Open();
-        else Close();
+        Debug.Log("CartaInteractable.Interact() llamado");
+        if (!isOpen)
+            OpenCarta();
+        else
+            CloseCarta();
     }
 
     public string GetInteractionMessage()
@@ -41,34 +45,39 @@ public class CartaInteractable : MonoBehaviour, IInteractable
         return isOpen ? "Cerrar carta (E / Esc)" : "Leer carta (E)";
     }
 
-    private void Open()
+    private void OpenCarta()
     {
+        Debug.Log("OpenCarta() - Activando panel: " + (cartaPanel != null ? cartaPanel.name : "NULL"));
         isOpen = true;
-        if (cartaPanel != null) cartaPanel.SetActive(true);
+        cartaPanel.SetActive(true);
+        playerInteraction.isReading = true;
+        
 
-        // bloquear controls
-        if (playerMovement != null) playerMovement.enabled = false;
-        if (cameraLook != null) cameraLook.enabled = false;
+        // Bloquear jugador
+        playerMovement.enabled = false;
+        cameraLook.enabled = false;
+        playerInteraction.enabled = false;
 
-        // cursor libre para leer
+        // Cursor libre
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
 
-    private void Close()
+    private void CloseCarta()
     {
         isOpen = false;
-        if (cartaPanel != null) cartaPanel.SetActive(false);
+        cartaPanel.SetActive(false);
+        playerInteraction.isReading = false;
 
-        // devolver controls
-        if (playerMovement != null) playerMovement.enabled = true;
-        if (cameraLook != null) cameraLook.enabled = true;
+        // Reactivar jugador
+        playerMovement.enabled = true;
+        cameraLook.enabled = true;
+        playerInteraction.enabled = true;
 
-        // cursor como FPS
+        // Cursor FPS
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        // Evita “inputs pegados” (como hacéis con el armario)
         Input.ResetInputAxes();
     }
 }
