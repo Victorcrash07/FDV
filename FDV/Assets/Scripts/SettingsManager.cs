@@ -6,6 +6,7 @@ using UnityEngine.Audio;
 public class SettingsManager : MonoBehaviour
 {
     public AudioMixer masterMixer; // Referencia a tu Audio Mixer
+    public GameObject AccesibilidadLuces;
 
     // Convierte el valor del slider (0 a 1) a decibelios (-80 a 0)
     public void SetMasterVolume(float volume)
@@ -26,6 +27,19 @@ public class SettingsManager : MonoBehaviour
         if (playerCameraLook != null)
         {
             playerCameraLook.mouseSensitivity = sensitivity;
+        }
+    }
+
+    public void SetVisualHints(bool status)
+    {
+        if (AccesibilidadLuces != null)
+        {
+            AccesibilidadLuces.SetActive(status);
+            
+        }
+        else
+        {
+            Debug.LogWarning("¡Cuidado! No has asignado el GameObject de luces en el Inspector.");
         }
     }
 }
