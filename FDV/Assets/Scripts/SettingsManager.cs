@@ -12,7 +12,8 @@ public class SettingsManager : MonoBehaviour
     public void SetMasterVolume(float volume)
     {
         // El logaritmo permite que el control de volumen sea más suave.
-        masterMixer.SetFloat("MasterVolume", Mathf.Log10(volume) * 20);
+        float valorSeguro = Mathf.Clamp(volume, 0.0001f, 1f);
+        masterMixer.SetFloat("MasterVolume", Mathf.Log10(valorSeguro) * 20);
     }
     
     // Repite esta función para SetMusicVolume(float volume) y SetFXVolume(float volume)
