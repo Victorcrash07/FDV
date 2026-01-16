@@ -13,8 +13,9 @@ public class Llave : MonoBehaviour, IInteractable
     {
         if (InventoryManager.Instance != null)
         {
-            InventoryManager.Instance.AddItem(thisKey); // Registra la llave
-            gameObject.SetActive(false); // La hacemos desaparecer
+            InventoryManager.Instance.AddItem(thisKey); // Guarda la llave en el inventario
+            gameObject.SetActive(false); // La hacemos desaparecer de la escena
         }
     }
 }
+
